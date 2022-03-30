@@ -1,0 +1,16 @@
+body {
+    background-color: rgba(157, 157, 197, 0.473);
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    width: 600px;
+    margin: auto;
+
+}
+
+.space {
+    margin-bottom: 20px;
+}

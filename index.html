@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulário Cadastro</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Formulário para Cadastro de Jogador</h1>
+        <ul>
+            <h2>Informações Pessoais</h2>
+            <li>
+                <label for="txtnome">Nome: </label>
+                <input type="text" name="txtnome" id="txtnome"  placeholder="Digite seu nome">
+            </li>
+            <div class="space"></div>
+            <li>
+                <label for="txtsnome">Sobrenome: </label>
+                <input type="text" name="txtsnome" id="txtsnome"    placeholder="Digite seu sobrenome">
+            </li>
+            <div class="space"></div>
+            <li>
+                <label for="bday">Nascimento:</label>
+                <input type="date" name="bday" id="bday">
+            </li>
+            <h2>Informações de Acesso:</h2>
+            <li>
+                <label for="txtuser">Usuário:</label>
+                <input type="text" name="txtuser" id="txtuser"  placeholder="Digite seu Usuário">
+            </li>
+            <div class="space"></div>
+            <li>
+                <label for="txtmail">E-mail:</label>
+                <input type="email" name="txtmail" id="txtmail" placeholder="Digite seu E-mail">
+            </li>
+            <div class="space"></div>
+            <li>
+                <label for="txtpass">Senha:</label>
+                <input type="password" name="txtpass" id="txtpass" placeholder="Crie uma senha"><label for="txtpass">
+            </li>
+        </ul>
+        
+        <button onclick="sub()">Me Inscrever</button>
+    </div>
+    <footer>&copy;CodeGuiFs</footer>
+    <script src="script.js"></script>
+</body>
+</html>
