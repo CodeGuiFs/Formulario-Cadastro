@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,65 +9,71 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
     <title>Formulário Cadastro</title>
 </head>
+
 <body>
-    <div class="box">
-        <h1>Formulário para Cadastro de Jogador</h1>
-        <ul>
-            <h2>Informações Pessoais:</h2>
-            <li>
-                <label for="txtname">Nome: </label>
-            </li>
-            <abbr title="Apenas o primeiro nome">
-                <input type="text" name="txtname" id="txtname" placeholder="Digite seu nome">
-            </abbr>
-            <div class="space"></div>
-            <li>
-                <label for="txtsname">Sobrenome: </label>
-            </li>
-            <abbr title="Seu sobrenome">
-                <input type="text" name="txtsname" id="txtsname"    placeholder="Digite seu sobrenome">
-            </abbr>
-            <div class="space"></div>
-            <li>
-                <label for="bday">Nascimento:</label>
-            </li>
-            <abbr title="Digite ou selecione no ícone ao lado">
-                <input type="date" name="bday" id="bday">
-            </abbr>
-            <h2>Informações de Acesso:</h2>
-            <li>
-                <label for="txtuser">Usuário:</label>
-            </li>
-            <abbr title="Nome para acesso ao sistema">
-                <input type="text" name="txtuser" id="txtuser" placeholder="Digite seu Usuário">
-            </abbr>
-            <div class="space"></div>
-            <li>
-                <label for="txtmail">E-mail:</label>
-            </li>
-            <abbr title="Informe seu E-mail">
-                <input type="email" name="txtmail" id="txtmail" placeholder="Digite seu E-mail">
-            </abbr>
-            <div class="space"></div>
-            <li>
-                <label for="txtpass">Senha:</label>
-            </li>
-            <abbr title="Mínimo 6 caracteres. Incluindo números letras e ao menos 1 caracter especial [ @  !  ? ]">
-                <input type="password" name="txtpass" id="txtpass" placeholder="Crie uma senha">
-            </abbr>
-            <div class="info">
+    <form action="" id="playerform">
+        <div class="box">
+            <h1>Formulário para Cadastro de Jogador</h1>
             <ul>
-                <li>Mínimo 6 Caracteres</li>
-                <li>Mínimo 1 Número (0 a 9)</li>
-                <li>Mínimo 1 Caracter Especial (ex.: "@", "!", "?")</li>
+                <h2>Informações Pessoais:</h2>
+                <li>
+                    <label for="name">Nome: </label>
+                </li>
+                <abbr title="Apenas o primeiro nome">
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
+                </abbr>
+                <div class="space"></div>
+                <li>
+                    <label for="sname">Sobrenome: </label>
+                </li>
+                <abbr title="Seu sobrenome">
+                    <input type="text" name="sname" id="sname" placeholder="Digite seu sobrenome" required>
+                </abbr>
+                <div class="space"></div>
+                <li>
+                    <label for="bdate">Nascimento:</label>
+                </li>
+                <abbr title="Digite ou selecione no ícone ao lado">
+                    <input type="date" name="bdate" id="bdate" required>
+                </abbr>
+                <h2>Informações de Acesso:</h2>
+                <li>
+                    <label for="user">Usuário:</label>
+                </li>
+                <abbr title="Nome para acesso ao sistema">
+                    <input type="text" name="user" id="user" onchange="checkUser()" placeholder="Digite seu Usuário"
+                        required>
+                </abbr>
+                <div class="space"></div>
+                <li>
+                    <label for="mail">E-mail:</label>
+                </li>
+                <abbr title="Informe seu E-mail">
+                    <input type="email" name="mail" id="mail" placeholder="Digite seu E-mail" required>
+                </abbr>
+                <div class="space"></div>
+                <li>
+                    <label for="pass">Senha:</label>
+                </li>
+                <abbr title="Mínimo 6 caracteres. Incluindo números letras e ao menos 1 caracter especial [ @  !  ? ]">
+                    <input type="password" name="pass" id="pass"
+                        pattern="^(?=.*[a-z])(?=.*\d)(?=.*[!#@$%&*+=-]).{6,16}$" placeholder="Crie uma senha" required>
+                </abbr>
+                <div class="info">
+                    <ul>
+                        <li>Mínimo 6 Caracteres</li>
+                        <li>Mínimo 1 Número (0 a 9)</li>
+                        <li>Mínimo 1 Caracter Especial (ex.: "@", "!", "?")</li>
+                    </ul>
+                </div>
             </ul>
+            <div class="boxfooter">
+                <button onclick="send()">Me Inscrever</button>
             </div>
-        </ul>
-        <div class="boxfooter">    
-            <button onclick="runCode()">Me Inscrever</button>
         </div>
-    </div>
+    </form>
     <footer>&copy;CodeGuiFs</footer>
     <script src="script.js"></script>
 </body>
+
 </html>
